@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:800|Permanent+Marker');
+$chuckLink: 'https://market.enonic.com/vendors/enonic/com.enonic.app.chucknorris/_/attachment/inline/1c700535-289d-4563-883f-cb8d4ec69b6a:43f4099ef34bd5fa69c7ab886d971be70cba17db/application.svg';
+$color-red: #F33535;
+
+body {
+  display: flex;
+  font-family: Permanent Marker, sans-serif;
+  font-size: 3.25vmax;
+  justify-content: center;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+button, p {
+  padding: 0;
+}
+
+button {
+  align-self: center;
+  background-color: $color-red;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: Heebo, sans-serif;
+  font-size: 75%;
+  margin-top: 1em;
+  outline: 0;
+  transition: all .2s ease;
+  text-transform: uppercase;
+  width: 4em;
+  height: 4em;
+  &:hover {
+    background-color: #000;
+    color: $color-red;
+  }
+}
+
+main {
+  padding: 0 2%;
+  width: 80vw;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#joke {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  text-align: justify;
+}
+
+.logo {
+  background: url($chuckLink) no-repeat bottom;
+  background-size: 33vh;
+}
+
+@media (hover:none), (hover:on-demand) {
+  button:hover {
+    background-color: $color-red;
+    color: #000;
+  }
+}
