@@ -9,6 +9,7 @@ body {
   justify-content: center;
   line-height: 1.5em;
   margin: 0;
+  overflow: hidden;
   padding: 0;
   text-align: justify;
 }
@@ -69,6 +70,10 @@ section {
   animation: slam 1s ease-in;
 }
 
+.slide-in-enter-active {
+  animation: slide-in .15s ease forwards;
+}
+
 @keyframes slam {
   0% {
     transform: scale(5, 5);
@@ -80,6 +85,26 @@ section {
   100% {
     transform: scale(1, 1);
     opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    filter: blur(6px);
+    opacity: 0;
+    transform: translateX(-300%);
+  }
+  25% {
+    filter: blur(3px);
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(12%);
+    filter: blur(0px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 

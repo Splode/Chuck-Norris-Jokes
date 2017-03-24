@@ -1,9 +1,10 @@
 <template>
   <main class="logo rattle">
     <section>
-      <button class="slam" @click="next">BAMF!</button>
-      <transition name="slam-in" appear>
-        <p>{{ punchLine }}</p>
+      <button class="slam" @click="hide">BAMF!</button>
+      <!-- transition hook after-leave -->
+      <transition name="slide-in" @after-leave="next">
+        <p v-if="show">{{ punchLine }}</p>
       </transition>
     </section>
   </main>
@@ -14,6 +15,7 @@ export default {
   data () {
     return {
       batch: [],
+      show: true,
       jokes: [],
     }
   },
@@ -41,8 +43,14 @@ export default {
         });
       });
     },
+    // Needed for transition conditional
+    hide() {
+      this.show = false;
+    },
     next() {
       this.jokes.length < 3 ? this.update() : this.jokes.shift();
+      // transition conditional
+      this.show = true;
     },
     update() {
       let vm = this;
