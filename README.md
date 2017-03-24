@@ -1,18 +1,9 @@
-# chuck-norris-jokes
+# Chuck Norris Jokes
 
 > An app that serves up random Chuck Norris jokes.
 
-## Build Setup
+See a live demo at https://splode.github.io/chuck
 
-``` bash
-# install dependencies
-npm install
+## Technology
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Built with vue.js. Many thanks to The Internet Chuck Norris Database http://www.icndb.com/
