@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/chuck/dist/',
+    publicPath: '/chuck/dist/', // Change to /chuck/dist/ for production
     filename: 'build.js'
   },
   module: {

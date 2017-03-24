@@ -1,6 +1,6 @@
 {
   "name": "chuck-norris-jokes",
-  "description": "An app that serves up random Chuck Norris jokes.",
+  "description": "Get a random Chuck Norris joke to the face. Powered by Vue.js and The ICNDb.",
   "version": "1.0.0",
   "author": "Christopher Murphy (christopherianmurphy@gmail.com)",
   "private": true,

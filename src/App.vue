@@ -1,8 +1,10 @@
 <template>
-  <main class="logo">
+  <main class="logo rattle">
     <section>
-      <button @click="next">BAMF!</button>
-      <p>{{ punchLine }}</p>
+      <button class="slam" @click="next">BAMF!</button>
+      <transition name="slam-in" appear>
+        <p>{{ punchLine }}</p>
+      </transition>
     </section>
   </main>
 </template>
@@ -33,9 +35,9 @@ export default {
       $(document).ready(function() {
         $.getJSON(apiURL, function(data) {
           vm.batch = data.value.reduce(function(acc, item) {
-          acc.push(item.joke);
-          return acc;
-        }, []);
+            acc.push(item.joke);
+            return acc;
+          }, []);
         });
       });
     },
@@ -55,5 +57,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import 'main.scss'
+@import 'main.scss';
 </style>

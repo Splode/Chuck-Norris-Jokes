@@ -60,6 +60,44 @@ section {
   background-size: 33vh;
 }
 
+.rattle {
+  animation: rattle .2s;
+  animation-delay: 1s;
+}
+
+.slam {
+  animation: slam 1s ease-in;
+}
+
+@keyframes slam {
+  0% {
+    transform: scale(5, 5);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes rattle
+{
+  0% { margin-top: 0; margin-left: 0; }
+  10% { margin-top: -15px; margin-left: 0; }
+  20% { margin-top: 0; margin-left: -15px; }
+  30% { margin-top: 15px; margin-left: 0; }
+  40% { margin-top: 0; margin-left: 15px; }
+  50% { margin-top: -12px; margin-left: 0; }
+  60% { margin-top: 0; margin-left: -12px; }
+  70% { margin-top: 6px; margin-left: 0; }
+  80% { margin-top: 0; margin-left: 6px; }
+  90% { margin-top: -3px; margin-left: 0; }
+  100% { margin-top: 0; margin-left: 0; }
+}
+
 @media (hover:none), (hover:on-demand) {
   button:hover {
     background-color: $color-red;
