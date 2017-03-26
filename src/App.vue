@@ -20,6 +20,7 @@ export default {
     }
   },
   computed: {
+    // Serves current joke after converting common HTML entities
     punchLine() {
       let current = this.jokes[0];
       if (this.jokes.length > 0) {
@@ -31,6 +32,7 @@ export default {
     this.fetchData();
   },
   methods: {
+    // Fetch joke data from ICNDB with jQuery and store in batch
     fetchData() {
       let apiURL = 'https://api.icndb.com/jokes/random/10';
       let vm = this;
@@ -47,11 +49,13 @@ export default {
     hide() {
       this.show = false;
     },
+    // Call next joke
     next() {
       this.jokes.length < 3 ? this.update() : this.jokes.shift();
       // transition conditional
       this.show = true;
     },
+    // Updates joke list from batch
     update() {
       let vm = this;
       this.jokes.shift();
